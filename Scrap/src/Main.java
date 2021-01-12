@@ -14,23 +14,15 @@ public class Main {
 	        
 	public static void main(String[] args) {
 		
-		File caminho = new File("C:\\Users\\RyXan\\Desktop\\Arquivo.html");
-		
+		File caminho = new File("Aqui você coloca o caminho e extensão que deseja salvar o arquivo");
 		String html = "";
 		
-		
 		try {
-				
-
-				Document documentoSoup = Jsoup.connect("https://ksilaudo.paineldeconsultas.com.br/rdrv2/consulta/215F48EFA5421A51598615461A7FLPOIRCD2KM599V2BS1DDCV").get();
-		
+				Document documentoSoup = Jsoup.connect("Aqui você coloca a URl a qual deseja extrair o código fonte ").get();	
 				html = documentoSoup.toString();
-				
 				BufferedWriter bw = new BufferedWriter(new FileWriter(caminho));
-				
 				bw.write(html);
 				bw.close();
-				
 				System.out.println("A extração foi feita com sucesso! ");
 				
 				
